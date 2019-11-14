@@ -84,8 +84,8 @@ public class AddFragment extends Fragment implements View.OnClickListener {
                 sname.setText("");
                 saddress.setText("");
                 sage.setText("");
-                rfemale.setText("");
-                rmale.setText("");
+                rfemale.setChecked(false);
+                rmale.setChecked(false);
 
 
             break;
