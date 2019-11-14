@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             if (TextUtils.isEmpty(etU.getText().toString())){etU.setError("Input Username"); return;}
             if (TextUtils.isEmpty(etP.getText().toString())){etP.setError("Input Password"); return;}
 
-            if (user.equals("admin") && pass.equals("admin")){
+            if (user.equals("sushant") && pass.equals("S4321")){
 
                 Toast toast = Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_SHORT);
                 toast.setGravity(Gravity.TOP|Gravity.CENTER_HORIZONTAL,0,0);
