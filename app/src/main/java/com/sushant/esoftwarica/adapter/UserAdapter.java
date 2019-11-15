@@ -37,7 +37,7 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull UserViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull UserViewHolder holder, final int position) {
 
       final User user = userList.get(position);
       String gender=user.getGender();
@@ -54,6 +54,15 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         holder.add.setText(user.getAddress());
         holder.Age.setText(user.getAge());
         holder.gen.setText(user.getGender());
+
+        holder.btndelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                userList.remove(position);
+                notifyDataSetChanged();
+            }
+        });
+
 
     }
 
